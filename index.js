@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
@@ -9,6 +10,8 @@ const authRoute = require("./routes/auth")
 const postRoute = require("./routes/posts")
 const multer = require("multer");
 const path = require("path");
+
+app.use(cors());
 
 dotenv.config();
 
